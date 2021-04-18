@@ -81,3 +81,15 @@
   color: #fff;
   font-size: 100px;
 }
+
+.bg-777{
+  padding: 100px 0;
+  background: #f6f6f6;
+}
+
+@media screen and (max-width: 999px) {
+  .mbl-mar{
+    margin-top: 7px;
+  }
+  
+}

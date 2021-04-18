@@ -1,0 +1,228 @@
+.top-icon {
+    color: white;
+    background-color: #00656D;
+    padding: 10px 0;
+  }
+  
+  .font-size {
+    font-size: 13px;
+  }
+  
+  .list-inline-item {
+    display: inline-block;
+  }
+  
+  
+  
+  .list-inline {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .list-inline-item i {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  header.main-header {
+    color: white;
+    background: #014073;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  
+  .logo h2 span {
+    padding: 5px 7px;
+    color: #ff9d34;
+  }
+  
+  .logo h2 {
+    padding: 31px 15px;
+    font-size: 30px;
+  }
+  
+  .mainNav ul li a {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 31px 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .sub-menu-page {
+    position: absolute;
+    background: aqua;
+    z-index: 999;
+    top: 90%;
+    padding: 10px;
+    width: 7rem;
+  }
+  
+  .hide {
+    visibility: hidden;
+    /* visibility: visible; */
+  }
+  
+  .myDIV:hover + .hide {
+    transition: all 0.6s;
+    visibility: visible;
+    background: #014073;
+  }
+  
+  .myDIV:hover {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    color: #ff9d34 !important;
+  }
+  
+  .sub-menu-page li {
+    float: left;
+    line-height: 2rem;
+  }
+  
+  .link:hover {
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #ff9d34;
+    visibility: visible;
+  }
+  .hide:hover {
+    visibility: visible;
+    background: #014073;
+    transition: all 0.3s;
+    cursor: pointer;
+    visibility: visible;
+    list-style: none;
+  }
+  
+  a:hover {
+    transition: all 0.3s;
+    text-decoration: none !important;
+    color: #ff9d34 !important;
+  }
+  
+  .banner-div {
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #dee2e6;
+  }
+  
+  .display-4 {
+    margin-top: 10rem;
+    line-height: 1.2;
+    color: #014073;
+  }
+  .btnc {
+    background-color: #ff9d34;
+    color: whitesmoke;
+  }
+  
+  .wt-section {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    float: left;
+    width: 100%;
+    background: #fff;
+  }
+  
+  .our-ser {
+    font-weight: bolder;
+    color: #014073;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+  
+  .card-border {
+    border: 1px solid #dee2e6 !important;
+  }
+  
+  .rounded-md {
+    border-radius: 0.625rem;
+  }
+  
+  .all-type {
+    height: 50vh;
+  }
+  
+  .bg-grey {
+    background-color: #dee2e6 !important;
+  }
+  
+  .color-orange {
+    color: #ff9d34;
+  }
+  
+  .bg-blue {
+    background-color: #014073;
+  }
+  
+  .consultancy-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    float: left;
+    color: #dee2e6;
+    width: 100%;
+    background: #014073;
+  }
+  
+  .woman-section {
+    padding-top: 6.25rem;
+    float: left;
+    width: 100%;
+    background: #fff;
+  }
+  
+  .border-quote-btn {
+    border: 1px solid white;
+    color: #dee2e6;
+  }
+  
+  .border-quote-btn:hover {
+    background-color: #dee2e6;
+    color: black !important;
+  }
+  
+  .img-con {
+    background-color: white;
+  }
+  
+  .foot-div ul li {
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    line-height: 2.5rem;
+    width: 100%;
+  }
+  
+  .social-icons ul li {
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    line-height: 2.5rem;
+  }
+  
+  .social-icons ul {
+    margin-left: -37px !important;
+  }
+  .foot-div ul {
+    margin-left: -37px !important;
+  }
+  
+  .foot-rights {
+    line-height: 7px;
+  }
+  
+  .foot-div ul li:hover,
+  .social-icons ul li:hover {
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #ff9d34;
+  }
+  

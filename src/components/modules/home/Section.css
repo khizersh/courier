@@ -1,0 +1,52 @@
+.woman-section {
+    padding-top: 0.25rem;
+    float: left;
+    width: 100%;
+    background: #fff;
+}
+
+.our-service {
+    font-weight: bolder;
+    color: #00656D;
+}
+
+.ps{
+    font-size: 17px;
+    line-height: 28px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.img-con {
+    background-color: white;
+}
+
+.mw-100 {
+    max-width: 100%!important;
+}
+
+.rounded {
+    border-radius: .25rem!important;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.about-icon {
+    padding: 1px;
+}
+
+.about-heading {
+    font-size: 22px;
+}
+
+.about-sub-heading{
+    color:   #00656D;;
+}
+
+.about-sub-heading p{
+    color:   #6c757d!important;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}

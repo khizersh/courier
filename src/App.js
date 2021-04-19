@@ -11,6 +11,7 @@ import Marketing from "./components/pages/Marketing";
 import Consulting from "./components/pages/Consulting";
 import MainLayout from "./components/modules/layout/MainLayout";
 import TrackingModal from "./components/modules/home/TrackingModal";
+import Tracking from "./components/pages/Tracking";
 
 function App() {
 
@@ -18,13 +19,14 @@ function App() {
 
   setTimeout(() => {
     setCheck(true)
-  }, 1000);
+  }, 2000);
   return (
     <Router>
       <MainLayout>
-      {/* {check && <TrackingModal check={true} />}  */}
+      {check && <TrackingModal check={true} />} 
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/tracking/:id" exact component={Tracking} />
           <Route path="/services" component={Services} />
           <Route path="/products" component={Products} />
           <Route path="/contact-us" component={ContactUs} />

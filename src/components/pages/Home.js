@@ -8,6 +8,8 @@ import Slider from "react-slick";
 import PricingSection from "../modules/home/PricingSection";
 import CustomerCount from "../modules/home/CustomerCount";
 import Testimonials from "../modules/home/Testimonials";
+import Quotation from "../modules/home/Quotation";
+import Clients from "../modules/home/Clients";
 
 export default function Home() {
   const data = [1, 2, 3, 4, 5, 6];
@@ -19,6 +21,31 @@ export default function Home() {
     slidesToScroll: 2,
     autoplay: true,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
@@ -54,6 +81,8 @@ export default function Home() {
 
       <CustomerCount />
       <Testimonials />
+      <Clients />
+      <Quotation />
 
       {/* <h1 className="home">EPIC</h1> */}
     </>

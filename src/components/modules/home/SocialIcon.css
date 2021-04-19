@@ -162,6 +162,12 @@
   .bg-blue {
     background-color: #014073;
   }
+
+  .pos-fix{
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 999;
+  }
   
   .consultancy-section {
     padding-top: 3rem;

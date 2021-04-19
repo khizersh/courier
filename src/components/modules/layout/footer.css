@@ -1,0 +1,40 @@
+.wt-section {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    float: left;
+    width: 100%;
+    background-color: #00656D;
+}
+.text-white {
+    color: #fff!important;
+}
+.foot-div ul {
+    margin-left: 0px !important;
+}
+
+.footer-heading{
+    color: #F8A555 !important;
+}
+.foot-div ul li {
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    line-height: 2.5rem;
+    width: 100%;
+}
+
+.foot-div ul li {
+    text-decoration: none;
+    list-style: none;
+    float: left;
+    line-height: 2.5rem;
+    width: 100%;
+}
+.foot-rights {
+    line-height: 7px;
+}
+
+.social-icons ul {
+    margin-left: -7px !important;
+    /* text-align: left; */
+}

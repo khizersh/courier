@@ -1,0 +1,22 @@
+.track{
+    background-color: #f1f1f1;
+    padding: 1.4rem;
+}
+
+.bg{
+    background-color: #f1f1f1;
+}
+
+.bg-white{
+    background-color: white;
+}
+.border{
+    border-radius: .4rem;
+    border: .1rem solid #b5b5b5;
+    margin-bottom: 2.1rem;
+    padding: 2.1rem 2.1rem 2.1rem 1.4rem;
+}
+
+.color-orange{
+    color: #F8A555;
+}

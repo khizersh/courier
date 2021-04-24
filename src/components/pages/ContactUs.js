@@ -1,6 +1,12 @@
-import React from 'react';
-import '../../App.css';
+import React from "react";
+import "../../App.css";
+import Quotation from "../modules/home/Quotation"
 
 export default function ContactUs() {
-  return <h1 className='contact-us'>CONTACT</h1>;
+  return (
+    <div>
+      <Quotation />
+
+    </div>
+  );
 }

@@ -5,14 +5,14 @@ import Footer from "./Footer";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="overflow-hidden">
+    <div>
       <div>
         <SocialIcons />
       </div>
       <div>
         <Navbar />
       </div>
-      {children}
+      <div className="overflow-hidden">{children}</div>
       <Footer />
     </div>
   );

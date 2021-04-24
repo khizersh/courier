@@ -63,9 +63,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="row mt-5">
-           <div className="col-12 text-center">
-             <p className="foot-rights">This website hosted by PDHS Courier.</p>
-             <p className="foot-rights">© All Rights Reserved</p>
+           <div className="col-12 text-center ">
+             <p className="foot-rights text-white">This website hosted by PDHS Courier.</p>
+             <p className="foot-rights  text-white">© All Rights Reserved</p>
            </div>
           </div>
         </div>

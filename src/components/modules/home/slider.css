@@ -5,17 +5,30 @@
   background-size: cover !important;
   position: relative;
 }
+.bg-white{
+  background-color: white !important;
+}
+
+.service-banner {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  position: relative;
+}
+
 
 /* .sick-prev {
   left: 26px;
 
   background-color: black;
 }
+*/
 
 .slick-next {
-  right: 41px !important;
-  font-size: 50px !important;
-} */
+  right: 4% !important;
+
+} 
 
 .overlay-bg {
   position: absolute;
@@ -42,13 +55,19 @@
   z-index: 9999;
 }
 
+.slick-next:before, .slick-prev:before {
+  font-size: 50px !important;
+  line-height: 1;
+  opacity: .75;
+  /* color: #4be345 !important; */
+}
 .btn-dark {
   background-color: transparent;
   display: inline-block;
-  color: #f8a555;
+  color: #4be345;
   padding: 15px 30px;
   margin-right: 10px;
-  border: 1px solid #f8a555;
+  border: 1px solid #4be345;
   text-transform: uppercase;
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -58,7 +77,7 @@
 }
 .btn-dark:hover {
   background-color: white;
-  color: #f8a555;
+  color: #4be345;
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -70,7 +89,7 @@
 
 .about-points-block {
   padding: 31px 40px;
-  background-color: #f8a555;
+  background-color: #4be345;
   position: relative;
   z-index: 1;
   margin-top: -142px;

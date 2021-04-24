@@ -18,7 +18,7 @@ const Banner = ({subtitle , title , image}) => {
                 <h1 className="slider-heading">
                   {title}
                 </h1>
-                <button className="btn-dark">Contact us <i class="fas fa-arrow-right pl-2"></i></button>
+                <button className="btn-dark bg-white">Contact us <i class="fas fa-arrow-right pl-2"></i></button>
               </div>
             </div>
           </div>

@@ -14,18 +14,18 @@ const SocialIcons = () => {
               <i class="fa fa-envelope"></i> info@yourdomain.com
             </span>
           </div>
-          <div class="col-6 text-right">
+          <div class="col-6 text-right ">
             <ul class="list-inline m-0">
-              <li class="list-inline-item">
+              <li class="list-inline-item soc-icon">
                 <i class="fa fa-facebook"></i>
               </li>
-              <li class="list-inline-item">
+              <li class="list-inline-item soc-icon">
                 <i class="fa fa-instagram"></i>
               </li>
-              <li class="list-inline-item">
+              <li class="list-inline-item soc-icon">
                 <i class="fa fa-twitter"></i>
               </li>
-              <li class="list-inline-item">
+              <li class="list-inline-item soc-icon">
                 <i class="fa fa-dribbble"></i>
               </li>
             </ul>

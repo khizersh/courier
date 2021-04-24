@@ -29,68 +29,66 @@ function Navbar() {
 
   return (
     <>
-      <div className="pos-sticky">
-        <nav className="navbar">
-          <Link to="/" className="navbar-logo mb-4" onClick={closeMobileMenu}>
-            PDHS Courier
-            <i class="fab fa-firstdraft" />
-          </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li
-              className="nav-item"
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
+      <nav className="navbar sticky-top ">
+        <Link to="/" className="navbar-logo mb-3" onClick={closeMobileMenu}>
+          PDHS Courier
+          <i class="fab fa-firstdraft" />
+        </Link>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
+            <Link
+              to="/services"
+              className="nav-links"
+              onClick={closeMobileMenu}
             >
-              <Link
-                to="/services"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Services <i className="fas fa-caret-down" />
-              </Link>
-              {dropdown && <Dropdown />}
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/products"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Products
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/contact-us"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/sign-up"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li>
-          </ul>
-          <div className="d-none d-lg-block mb-3">
-            <Button />
-          </div>
-        </nav>
-      </div>
+              Services <i className="fas fa-caret-down" />
+            </Link>
+            {dropdown && <Dropdown />}
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/faq"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              FAQ
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/contact-us"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/sign-up"
+              className="nav-links-mobile"
+              onClick={closeMobileMenu}
+            >
+              Sign Up
+            </Link>
+          </li>
+        </ul>
+        <div className="d-none d-md-block mb-3">
+          <Button />
+        </div>
+      </nav>
     </>
   );
 }

@@ -71,7 +71,7 @@ h4 {
 }
 .single-price-item h4 {
   margin: 25px 0;
-  background: #f8a555;
+  background: #4be345;
   display: inline-block;
   padding: 15px 25px;
   color: #fff;
@@ -101,7 +101,7 @@ h4 {
 }
 
 .facts-main-block {
-  background-color: #00656d;
+  background-color: #152425;
   padding: 80px;
 }
 .facts-heading {
@@ -118,7 +118,7 @@ h4 {
 
 .facts-dtl {
   font-size: 20px;
-  color: #f8a555;
+  color: #4be345;
 }
 
 .testimonials{
@@ -153,7 +153,7 @@ h4 {
 }
 
 .quotation-dtl {
-  background-color: #00656D;
+  background-color: #152425;
   width: 100%;
   height: 70px;
   display: flex;
@@ -162,13 +162,13 @@ h4 {
 }
 
 .quotation-dtl p {
-  color: white;
+  color: white !important;
   font-size: 18px;
 }
 
 .quotation-dtl p a{
   font-size: 20px;
-  color: #f8a555 !important;
+  color: #4be345 !important;
 }
 .car{
   background-color: white;
@@ -183,8 +183,8 @@ height: 53px;
 }
 
 .fa-star{
-  /* background: #f8a555;  */
-  color: #f8a555 ;
+  /* background: #4be345;  */
+  color: #4be345 ;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

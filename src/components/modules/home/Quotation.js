@@ -5,7 +5,7 @@ const Quotation = () => {
   return (
     <div className="quotation pb-5">
       <div className="container">
-        <h1 className="quot-title">Get Quotation</h1>
+        <h1 className="quot-title">Contact Us</h1>
         <div className="row p-4 car">
           <div className="col-12 col-md-6">
             <div class="form-group">
@@ -62,6 +62,19 @@ const Quotation = () => {
               </div>
             </div>
           </div>
+          <div className="col-12 col-md-12">
+            <div class="form-group">
+              <label for="name">Message.</label>
+              <textarea
+                name="message"
+                id="message"
+                class="form-control"
+                rows="5"
+                required=""
+                placeholder="Enter your message here."
+              ></textarea>
+            </div>
+          </div>
         </div>
         <div className="row car pb-3">
           <div className="col-12 text-center">
@@ -70,9 +83,13 @@ const Quotation = () => {
         </div>
         <div className="row">
           <div className="col-12 quotation-dtl text-center">
-            <p> <a><i className="fa fa-mobile fa-2x pr-2"></i></a> 
-              We are available at Mon-Fri call us <a>+ 212-4000-300</a>  during regular
-              business hours
+            <p>
+              {" "}
+              <a>
+                <i className="fa fa-mobile fa-2x pr-2"></i>
+              </a>
+              We are available at Mon-Fri call us <a>+ 212-4000-300</a> during
+              regular business hours
             </p>
           </div>
         </div>

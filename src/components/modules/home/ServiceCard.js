@@ -11,8 +11,8 @@ const ServiceCard = () => {
             <img />
           </div>
           <div className="about-point-dtl">
-            <p>SERVICE 01</p>
-            <p>Descritpion</p>
+            <p className="text-white">SERVICE 01</p>
+            <p className="text-white">Descritpion</p>
           </div>
         </div>
       </div>

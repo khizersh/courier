@@ -12,6 +12,8 @@ import Consulting from "./components/pages/Consulting";
 import MainLayout from "./components/modules/layout/MainLayout";
 import TrackingModal from "./components/modules/home/TrackingModal";
 import Tracking from "./components/pages/Tracking";
+import ServiceDetail from "./components/pages/ServiceDetail";
+import Faq from "./components/pages/Faq";
 
 function App() {
 
@@ -23,13 +25,15 @@ function App() {
   return (
     <Router>
       <MainLayout>
-      {check && <TrackingModal check={true} />} 
+      {/* {check && <TrackingModal check={true} />}  */}
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/tracking/:id" exact component={Tracking} />
           <Route path="/services" component={Services} />
+          <Route path="/service-detail/:page" component={ServiceDetail} />
           <Route path="/products" component={Products} />
           <Route path="/contact-us" component={ContactUs} />
+          <Route path="/faq" component={Faq} />
           <Route path="/sign-up" component={SignUp} />
           <Route path="/marketing" component={Marketing} />
           <Route path="/consulting" component={Consulting} />

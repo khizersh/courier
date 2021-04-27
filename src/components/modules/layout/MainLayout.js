@@ -9,9 +9,9 @@ const MainLayout = ({ children }) => {
       <div>
         <SocialIcons />
       </div>
-      <div>
-        <Navbar />
-      </div>
+
+      <Navbar />
+
       <div className="overflow-hidden">{children}</div>
       <Footer />
     </div>

@@ -33,7 +33,7 @@
   
   .logo h2 span {
     padding: 5px 7px;
-    color: #4be345;
+    color: #12610f;
   }
   
   .logo h2 {
@@ -75,7 +75,7 @@
     text-decoration: none;
     cursor: pointer;
     transition: all 0.4s;
-    color: #4be345 !important;
+    color: #12610f !important;
   }
   
   .sub-menu-page li {
@@ -86,7 +86,7 @@
   .link:hover {
     transition: all 0.3s;
     cursor: pointer;
-    color: #4be345;
+    color: #12610f;
     visibility: visible;
   }
   .hide:hover {
@@ -101,7 +101,7 @@
   a:hover {
     transition: all 0.3s;
     text-decoration: none !important;
-    color: #4be345 !important;
+    color: #12610f !important;
   }
   
   .banner-div {
@@ -117,7 +117,7 @@
     color: #014073;
   }
   .btnc {
-    background-color: #4be345;
+    background-color: #12610f;
     color: whitesmoke;
   }
   
@@ -156,12 +156,12 @@
   }
   
   .color-orange {
-    color: #4be345;
+    color: #12610f;
   }
   
 
   .soc-icon:hover{
-    color: #4be345;
+    color: #12610f;
     cursor: pointer;
   }
   .bg-blue {
@@ -234,6 +234,6 @@
   .social-icons ul li:hover {
     transition: all 0.3s;
     cursor: pointer;
-    color: #4be345;
+    color: #12610f;
   }
   

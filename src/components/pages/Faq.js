@@ -37,7 +37,7 @@ const styles = {
   titleTextColor: "#152425",
   rowTitleColor: "#152425",
   rowContentColor: "grey",
-  arrowColor: "#4be345",
+  arrowColor: "#12610f",
 };
 
 const config = {
@@ -47,15 +47,18 @@ const config = {
 };
 
 const FaqComponent = () => {
+  useEffect(() => {
+    // console.log(document.title);
+    document.title = "FAQ"
+  }, []);
   return (
     <div
       className="container-fluid height"
       style={{ backgroundImage: `url(${bg})` }}
     >
-
-        <div className="section-heading text-center">
-            <h1>FAQ</h1>
-        </div>
+      <div className="section-heading text-center">
+        <h1>FAQ</h1>
+      </div>
       <div className="container card ">
         <Faq data={data} styles={styles} config={config} />
       </div>

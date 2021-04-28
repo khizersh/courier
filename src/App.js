@@ -14,6 +14,7 @@ import TrackingModal from "./components/modules/home/TrackingModal";
 import Tracking from "./components/pages/Tracking";
 import ServiceDetail from "./components/pages/ServiceDetail";
 import Faq from "./components/pages/Faq";
+import Headline from "./components/modules/news/Headline";
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
   return (
     <Router>
       <MainLayout>
-      {/* {check && <TrackingModal check={true} />}  */}
+      {check && <TrackingModal check={true} />} 
+      <Headline />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/tracking/:id" exact component={Tracking} />

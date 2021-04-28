@@ -10,9 +10,10 @@ import Testimonials from "../modules/home/Testimonials";
 import Quotation from "../modules/home/Quotation";
 import Clients from "../modules/home/Clients";
 import DealSlider from "../modules/home/DealSlider";
+import NewsCard from "../modules/news/NewsCard";
+import NewsComp from "../modules/news/NewsComp";
 
 export default function Home() {
-
   return (
     <>
       <HomePageSlider />
@@ -23,7 +24,15 @@ export default function Home() {
           <ServiceCard />
         </div>
       </div>
-      <div className="container">
+
+      <div className="container-fluid bg-777">
+        <div className="container">
+          <div className="row">
+            <NewsComp />
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
         <div className="row">
           <Section />
         </div>
@@ -34,7 +43,7 @@ export default function Home() {
             <h2>Special Offers</h2>
           </div>
           <div>
-          <DealSlider /> 
+            <DealSlider />
           </div>
         </div>
       </div>

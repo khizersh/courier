@@ -71,7 +71,7 @@ h4 {
 }
 .single-price-item h4 {
   margin: 25px 0;
-  background: #4be345;
+  background: #12610f;
   display: inline-block;
   padding: 15px 25px;
   color: #fff;
@@ -118,7 +118,7 @@ h4 {
 
 .facts-dtl {
   font-size: 20px;
-  color: #4be345;
+  color: #12610f;
 }
 
 .testimonials{
@@ -168,7 +168,7 @@ h4 {
 
 .quotation-dtl p a{
   font-size: 20px;
-  color: #4be345 !important;
+  color: #12610f !important;
 }
 .car{
   background-color: white;
@@ -183,8 +183,8 @@ height: 53px;
 }
 
 .fa-star{
-  /* background: #4be345;  */
-  color: #4be345 ;
+  /* background: #12610f;  */
+  color: #12610f ;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

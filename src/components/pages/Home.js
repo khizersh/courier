@@ -27,7 +27,7 @@ export default function Home() {
 
       <div className="container-fluid bg-777">
         <div className="container">
-          <div className="row">
+          <div >
             <NewsComp />
           </div>
         </div>

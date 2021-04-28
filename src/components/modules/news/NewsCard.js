@@ -1,23 +1,17 @@
 import React from "react";
 import "./news.css";
 
-const NewsCard = () => {
+const NewsCard = ({ title, desc }) => {
   return (
     <div class="col">
       <div class=" d-flex justify-content-center ">
         <div>
           <div class="card card-news">
             <div class="card-header card-header-news pb-0 bg-white">
-              <h5 class="font-weight-bold mt-2">
-                Preminum document delivery.{" "}
-              </h5>
+              <h5 class="font-weight-bold mt-2">{title}</h5>
             </div>
             <div class="card-body card-body-rad">
-              <p class="text-muted ">
-                {" "}
-                Your document will be reviewed by our team neatly
-                organzied,packaged,and sipped directly to you.
-              </p>
+              <p class="text-muted "> {desc}</p>
               <mark>
                 <small class="font-weight-bold">FREE SHIPPING</small>
               </mark>{" "}

@@ -33,7 +33,7 @@ function Navbar() {
       <nav className="navbar sticky-top ">
         <Link to="/" className="navbar-logo mb-3" onClick={closeMobileMenu}>
           PDHS Courier
-          <i class="fab fa-firstdraft" />
+          <i className="fab fa-firstdraft" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -57,6 +57,24 @@ function Navbar() {
               Services <i className="fas fa-caret-down" />
             </Link>
             {dropdown && <Dropdown />}
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/stations"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Stations
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/rate-calculator"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Rate Calculator
+            </Link>
           </li>
           <li className="nav-item">
             <Link

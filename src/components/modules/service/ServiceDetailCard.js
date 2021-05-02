@@ -71,7 +71,7 @@ const ServiceDetailCard = () => {
                       It is a long established fact that a reader will be
                       distracted by the readable content page.
                     </p>
-                    Read more <i class="fas fa-arrow-right pl-2"></i>
+                    Read more <i className="fas fa-arrow-right pl-2"></i>
                   </div>
                 </div>
               </div>

@@ -32,7 +32,7 @@ const Testimonials = () => {
   };
   return (
     <div
-      className="container-fluid"
+      className="container-fluid mb-sm-5"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="container testimonials text-center">
@@ -51,11 +51,11 @@ const Testimonials = () => {
                   <i className="fa fa-quote"></i>
                 </div>
                 <p className="testimonial-text text-muted">“ {m.comment} ”</p>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
                 <h5 className="pt-2">{m.name}</h5>
               </div>
             ))}

@@ -1,75 +1,107 @@
 .section-heading {
-    position: relative;
-    padding: 10px 0 20px 0;
-    margin-bottom: 50px;
-    font-size: 35px;
-    line-height: 50px;
+  position: relative;
+  padding: 10px 0 20px 0;
+  margin-bottom: 50px;
+  font-size: 35px;
+  line-height: 50px;
 }
 
 .num {
-    font-size: 50px;
-    color: #12610f;
-    text-transform: uppercase;
+  font-size: 50px;
+  color: #12610f;
+  text-transform: uppercase;
 }
 
-.title{
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
-    color: black !important;
+.title {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+  color: black !important;
 }
 
 .single-service-item {
-    box-shadow: 0 3px 9px -2px #d0cece;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 25px;
-    height: 250px;
-    position: relative;
-    z-index: 1;
-    border-radius: 0;
-    overflow: hidden;
-    background: #ffff;
+  box-shadow: 0 3px 9px -2px #d0cece;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 25px;
+  height: 250px;
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  overflow: hidden;
+  background: #ffff;
 }
 .icon {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.single-service-item h4 , p {
-    font-weight: 500;
-    margin: 15px 0;
-    color: black !important;
-    font-family: 'Poppins', sans-serif;
+.single-service-item h4,
+p {
+  font-weight: 500;
+  margin: 15px 0;
+  color: black !important;
+  font-family: "Poppins", sans-serif;
 }
 
 .single-service h2 {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 .single-service p {
-    font-size: 18px;
-    line-height: 32px;
+  font-size: 18px;
+  line-height: 32px;
 }
 .question-section {
-    background: #F7F7F7;
-    padding: 30px;
-    /* height: 100px; */
+  background: #ddd1d1;
+  padding: 30px;
+  /* height: 100px; */
 }
 
-.question-section input, .question-section textarea {
-    width: 100%;
-    background: #fff;
-    color: #191919;
-    border: 1px solid #eee;
-    padding: 10px;
-    margin-bottom: 20px;
+.question-section input,
+.question-section textarea {
+  width: 100%;
+  background: #fff;
+  color: #191919;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .helpline-section {
-    background: #152425;
-    color: #fff;
-    padding: 20px;
-    margin-top: 35px;
-    height: 230px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #152425;
+  color: #fff;
+  padding: 20px;
+  margin-top: 35px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* station */
+
+.stationList {
+  list-style: none;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 45px;
+  border-bottom: 1px solid #777;
+}
+.stationHeading {
+  list-style: none;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: sans-serif;
+  font-size: large;
+}
+
+@media screen and (max-width: 992px) {
+  .stationList {
+    line-height: 30px;
+  }
+  .stationHeading {
+
+    font-size: large !important;
+  }
 }

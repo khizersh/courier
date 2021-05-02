@@ -27,6 +27,9 @@ export default function Home() {
 
       <div className="container-fluid bg-777">
         <div className="container">
+        <div className="row mb-3">
+            <h2>Latest News</h2>
+          </div>
           <div >
             <NewsComp />
           </div>

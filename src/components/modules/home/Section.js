@@ -6,14 +6,14 @@ import secureservice from "../../../images/section/sec-service.png";
 
 const Section = () => {
   return (
-    <section class="woman-section pt-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-12 text-center px-md-5">
-            <h2 class="mb-4 our-service mb-md-4 mt-3 text-left">
+    <section className="woman-section pt-0">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 col-sm-12 text-center px-md-5">
+            <h2 className="mb-4 our-service mb-md-4 mt-3 text-left">
               25+ Experiences in Courier Service
             </h2>
-            <p class="text-muted ps text-left">
+            <p className="text-muted ps text-left">
               There anyone who loves or pursues nor desires to obtain pain of
               itself, bet it is pain, but because occasionally can packages as
               their default.
@@ -53,8 +53,8 @@ const Section = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12 px-md-5">
-            <img class="rounded mw-100 img-con" src={men} />
+          <div className="col-md-6 col-sm-12 px-md-5">
+            <img className="rounded mw-100 img-con" src={men} />
           </div>
         </div>
       </div>

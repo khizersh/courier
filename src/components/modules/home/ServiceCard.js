@@ -22,7 +22,7 @@ const ServiceCard = () => {
           readable content page.
         </p>
         <Link>
-          Read more <i class="fas fa-arrow-right pl-2"></i>
+          Read more <i className="fas fa-arrow-right pl-2"></i>
         </Link>
       </div>
     </div>

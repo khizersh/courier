@@ -18,7 +18,7 @@ const CustomerCount = () => {
                 <div className="facts-block text-center">
                   <h1 className="facts-heading">{m.heading}</h1>
                   <span>{m.span}</span>
-                  <div class="facts-dtl">{m.desc}</div>
+                  <div className="facts-dtl">{m.desc}</div>
                 </div>
               </div>
             ))}

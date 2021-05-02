@@ -19,7 +19,7 @@ const TrackingModal = ({ check }) => {
     <>
       <div className="track-btn">
         <Button variant="primary" onClick={handleShow}>
-          Track <i class="fas fa-truck-moving"></i>
+          Track <i className="fas fa-truck-moving"></i>
         </Button>
       </div>
       <div >

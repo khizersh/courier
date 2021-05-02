@@ -10,7 +10,7 @@
   font-size: 18px !important;
   color: #fff !important;
   cursor: pointer !important;
-  background-color: var(--primary) !important;
+  background-color: var(--primary);
 }
 
 .btn:hover {

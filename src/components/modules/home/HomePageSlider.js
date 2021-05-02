@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Banner from "./Banner";
 import slide1 from "../../../images/homeslider/slide1.jpg";
 import slide2 from "../../../images/homeslider/slide2.jpg";
 import slide3 from "../../../images/homeslider/slide3.jpg";
-import "./slider.css"
+import "./slider.css";
+import { getAllBanner } from "../../data/httpService";
 
 const HomePageSlider = () => {
   var settings = {
@@ -13,11 +14,23 @@ const HomePageSlider = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay:true,
-    arrows:true
+    autoplay: true,
+    arrows: true,
   };
 
-  const data = [
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getAllBanner()
+      .then((r) => {
+        if (r.data && r.data.statusCode == 1) {
+          setData(r.data.data);
+          console.log(r.data.data);
+        }
+      })
+      .catch((e) => setData(staticdata));
+  }, []);
+
+  const staticdata = [
     {
       subtitle: "Welcome To PDHS Courier",
       title: "We are Top Courier and Mover Service",
@@ -35,10 +48,15 @@ const HomePageSlider = () => {
     },
   ];
   return (
-    <Slider {...settings} >
+    <Slider {...settings}>
       {data.length &&
         data.map((m, i) => (
-          <Banner title={m.title} subtitle={m.subtitle} image={m.image} />
+          <Banner
+            title={m.title}
+            subtitle={m.description}
+            image={m.image}
+            url={m.url}
+          />
         ))}
     </Slider>
   );

@@ -1,55 +1,105 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import { Button } from "react-bootstrap";
+import swal from "sweetalert";
+import { addMessage } from "../../data/httpService";
+
 const Quotation = () => {
+  const [data, setData] = useState({
+    id: "",
+    name: "",
+    email: "",
+    contact: "",
+    message: "",
+  });
+
+  const onClick = () => {
+    addMessage(data)
+      .then((res) => {
+        if (res) {
+          if (res.data.statusCode == 1) {
+            return swal({
+              title: res.data.message,
+              timer: 2500,
+              icon: "success",
+            }).then((e) =>
+              setData({
+                id: "",
+                name: "",
+                email: "",
+                contact: "",
+                message: "",
+              })
+            );
+          } else {
+            return swal({
+              title: res.data.message,
+              timer: 2500,
+              icon: "error",
+            });
+          }
+        }
+      })
+      .catch((e) => console.log(e));
+  };
+
+  const onChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
   return (
     <div className="quotation pb-5">
       <div className="container">
         <h1 className="quot-title">Contact Us</h1>
         <div className="row p-4 car">
           <div className="col-12 col-md-6">
-            <div class="form-group">
+            <div className="form-group">
               <label for="name">Name</label>
               <input
                 type="text"
-                class="form-control"
-                id="name"
+                className="form-control"
+                name="name"
+                value={data.name}
                 placeholder="Full Name"
-                required=""
+                required
+                onChange={onChange}
               />
             </div>
           </div>
           <div className="col-12 col-md-6">
             {" "}
-            <div class="form-group">
+            <div className="form-group">
               <label for="name">Email</label>
               <input
                 type="email"
-                class="form-control"
-                id="name"
+                className="form-control"
+                name="email"
+                value={data.email}
                 placeholder="Email"
-                required=""
+                required
+                onChange={onChange}
               />
             </div>
           </div>
           <div className="col-12 col-md-6">
-            <div class="form-group">
+            <div className="form-group">
               <label for="name">Phone No.</label>
               <input
                 type="text"
-                class="form-control"
-                id="name"
+                className="form-control"
+                name="contact"
+                value={data.contact}
                 placeholder="Phone No."
-                required=""
+                required
+                onChange={onChange}
               />
             </div>
           </div>
-          <div className="col-12 col-md-6">
-            <div class="form-group">
+          {/* <div className="col-12 col-md-6">
+            <div className="form-group">
               <label>Select Courier Type</label>
-              <div class="form-group">
+              <div className="form-group">
                 <select
-                  class="form-control"
+                  className="form-control"
                   id="courier-type-box"
                   style={{ height: "53px" }}
                 >
@@ -61,24 +111,25 @@ const Quotation = () => {
                 </select>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="col-12 col-md-12">
-            <div class="form-group">
+            <div className="form-group">
               <label for="name">Message.</label>
               <textarea
                 name="message"
-                id="message"
-                class="form-control"
+                value={data.message}
+                className="form-control"
                 rows="5"
                 required=""
                 placeholder="Enter your message here."
+                onChange={onChange}
               ></textarea>
             </div>
           </div>
         </div>
         <div className="row car pb-3">
           <div className="col-12 text-center">
-            <Button>SEND REQUEST</Button>
+            <Button onClick={onClick}>SEND REQUEST</Button>
           </div>
         </div>
         <div className="row">

@@ -103,6 +103,7 @@ export default function Sidebar({ children }) {
   const [headline, setHeadline] = React.useState(false);
   const [news, setNews] = React.useState(false);
   const [message, setMessage] = React.useState(false);
+  const [offer, setOffer] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -137,6 +138,9 @@ export default function Sidebar({ children }) {
   };
   const handleMessage = () => {
     setMessage(!message);
+  };
+  const handleOffer = () => {
+    setOffer(!offer);
   };
 
   const links = [
@@ -248,6 +252,22 @@ export default function Sidebar({ children }) {
         {
           name: "News view",
           path: "/dashboard/news",
+          icon: <MailIcon />,
+        },
+       
+      ],
+    },
+    {
+      name: "Offers",
+      path: "/image",
+      icon: <MailIcon />,
+      onClick: handleOffer,
+      nested: true,
+      open: offer,
+      child: [
+        {
+          name: "Offer view",
+          path: "/dashboard/offer",
           icon: <MailIcon />,
         },
        

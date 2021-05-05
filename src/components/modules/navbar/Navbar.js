@@ -94,19 +94,17 @@ function Navbar() {
               Contact Us
             </Link>
           </li>
-          <li>
+          <li className="nav-item">
             <Link
               to="/sign-up"
-              className="nav-links-mobile"
+              className="nav-links"
               onClick={closeMobileMenu}
             >
-              Sign Up
+              <i className="fa fa-user"></i> Sign Up
             </Link>
           </li>
         </ul>
-        <div className="d-none d-md-block mb-3">
-          <Button />
-        </div>
+      
       </nav>
    
     </>

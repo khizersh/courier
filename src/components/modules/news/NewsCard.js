@@ -18,7 +18,13 @@ const NewsCard = ({ title, desc }) => {
         <div>
           <div className="card card-news">
             <div className="card-header card-header-news pb-0 bg-white">
-              <h5 className="font-weight-bold mt-2">{title}</h5>
+              <div className="text-center">
+                <i
+                  class="fas fa-truck-moving fa-3x"
+                  style={{ color: "#F9E8C7" }}
+                ></i>
+              </div>
+              <h5 className="font-weight-bold my-2">{title}</h5>
             </div>
             <div className="card-body card-body-rad">
               <p className="text-muted ">

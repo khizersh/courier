@@ -16,6 +16,19 @@ const HomePageSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows:false,
+          dots: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+   
+        },
+      },
+    ]
   };
 
   const [data, setData] = useState([]);

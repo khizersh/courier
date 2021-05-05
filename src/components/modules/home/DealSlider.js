@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import dubai from "../../../images/section/dubai.jpg";
 import uk from "../../../images/section/uk.jpg";
 import ca from "../../../images/section/ca.jpg";
 import DealCard from "./DealCard";
 import Slider from "react-slick";
+import { getAllOffer } from "../../data/httpService";
 
 const DealSlider = () => {
   var settings = {
@@ -21,7 +22,8 @@ const DealSlider = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
+          arrows:false,
         },
       },
       {
@@ -29,6 +31,7 @@ const DealSlider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows:false,
         },
       },
       {
@@ -36,11 +39,22 @@ const DealSlider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows:false,
         },
       },
     ],
   };
 
+  const [row , setRow]  = useState([])
+  useEffect(() => {
+    getAllOffer()
+      .then(res => {
+        if(res && res.data.statusCode == 1){
+          setRow(res.data.data)
+        }
+      })
+      .catch((e) => console.log(e));
+  }, []);
   const data = [
     {
       bg: dubai,
@@ -72,9 +86,9 @@ const DealSlider = () => {
   return (
     <div>
       <Slider {...settings}>
-        {data.length &&
-          data.map((m, i) => (
-            <DealCard key={i} bg={m.bg} title={m.title} desc={m.desc} />
+        {row.length &&
+          row.map((m, i) => (
+            <DealCard key={i} bg={m.image} title={m.title} desc={m.description} />
           ))}
       </Slider>
     </div>

@@ -204,6 +204,9 @@ height: 53px;
     font-family: 'FontAwesome';
   }
 
+  .mbl-full-width{
+    width: 86% !important;
+  }
   .quotation-dtl {
    height: 132px !important;
   }

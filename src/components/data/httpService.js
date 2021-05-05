@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BANNER, CITY, HEADLINE, MESSAGE, NEWS, PRICE, SERVICE, WEIGHT, ZONE } from "./ApiLinks";
+import { BANNER, CITY, HEADLINE, MESSAGE, NEWS, OFFER, PRICE, SERVICE, WEIGHT, ZONE } from "./ApiLinks";
 
 // zone
 export const getAllzones = async () => {
@@ -136,6 +136,20 @@ export const changeStatus = async (body) => {
 };
 export const removeMessage = async (id) => {
   return remove(MESSAGE, id);
+};
+//    offer
+
+export const getAllOffer = async () => {
+  return get(OFFER);
+};
+export const addOffer = async (body) => {
+  return post(OFFER, body);
+};
+export const editOffer = async (body) => {
+  return edit(OFFER, body);
+};
+export const removeOffer = async (id) => {
+  return remove(OFFER, id);
 };
 
 

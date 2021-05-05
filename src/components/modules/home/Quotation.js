@@ -128,8 +128,8 @@ const Quotation = () => {
           </div>
         </div>
         <div className="row car pb-3">
-          <div className="col-12 text-center">
-            <Button onClick={onClick}>SEND REQUEST</Button>
+          <div className="col-12 text-center mbl-full-width">
+            <Button className="mbl-full-width" onClick={onClick}>SEND REQUEST</Button>
           </div>
         </div>
         <div className="row">

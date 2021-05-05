@@ -42,7 +42,7 @@
 .nav-item {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 65px;
 }
 
 .nav-links {
@@ -114,16 +114,15 @@
     left: 0;
     transform: translate(25%, 50%);
   }
-
   .menu-icon {
     display: block;
     position: absolute;
+    left: 36px;
     top: 0;
-    right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-  }
+}
 
   .fa-times {
     color: #777;

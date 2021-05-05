@@ -6,7 +6,7 @@
   position: relative;
 }
 .bg-white {
-  background-color: white !important;
+  background-color: transparent !important;
 }
 
 .service-banner {
@@ -75,7 +75,8 @@
   transition: all 0.5s ease;
 }
 .btn-dark:hover {
-  background-color: white;
+  background-color: white !important;
+  opacity: 0.5 !important;
   color: #12610f;
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -108,7 +109,7 @@
 
 .about-type {
   padding: 40px 55px;
-  background-color: #ddd1d1;
+  background-color: #efe7e7;
   margin-bottom: 100px;
   position: relative;
   -webkit-transition: all 0.5s ease;
@@ -125,6 +126,27 @@
     right: 10% !important;
   
   } 
+
+  .about-points-block {
+    padding: 0px 40px !important;
+    background-color: #12610f;
+    position: relative;
+    z-index: 1;
+    margin-top: -142px;
+  }
+  
+
+  .btn-dark{
+    padding: 5px 8px;
+    margin-right: 10px;
+  }
+  .home-slider-bg {
+    height: 550px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    position: relative;
+  }
   
   .slider-heading {
     color: white;
@@ -137,6 +159,6 @@
   }
 
   .about-type {
-    margin-bottom: 155px;
+    margin-bottom: 170px;
   }
 }

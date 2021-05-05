@@ -89,7 +89,20 @@
 
 @media screen and (max-width: 999px) {
   .mbl-mar{
-    margin-top: 7px;
+    margin-top: 50% !important;
+  }
+
+  .neg-top-margin{
+    margin-top: -130px !important;
+  }
+
+  .bg-777{
+    padding: 70px 0;
+    background: #f6f6f6;
+  }
+
+  .text-center-mbl{
+    margin: auto !important;
   }
   
 }

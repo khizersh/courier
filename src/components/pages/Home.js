@@ -25,10 +25,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container-fluid bg-777">
+      <div className="container-fluid bg-777 neg-top-margin">
         <div className="container">
-        <div className="row mb-3">
-            <h2>Latest News</h2>
+        <div className="row mb-3 text-center-mbl">
+            <h2 className="text-center-mbl">Latest News</h2>
           </div>
           <div >
             <NewsComp />
@@ -42,8 +42,8 @@ export default function Home() {
       </div>
       <div className="mt-5 bg-777">
         <div className="container ">
-          <div className="row mb-3">
-            <h2>Special Offers</h2>
+          <div className="row mb-3 ">
+            <h2 className="text-center-mbl">Special Offers</h2>
           </div>
           <div>
             <DealSlider />

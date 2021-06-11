@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Dropdown from "./Dropdown";
 import Headline from "../news/Headline";
+import logo from "../../../images/logo.jpg";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -17,6 +18,7 @@ function Navbar() {
       setDropdown(false);
     } else {
       setDropdown(true);
+     
     }
   };
 
@@ -32,7 +34,7 @@ function Navbar() {
     <>
       <nav className="navbar sticky-top ">
         <Link to="/" className="navbar-logo mb-3" onClick={closeMobileMenu}>
-          PDHS Courier
+          {/* <img src={logo} width="200px"/> */}ZAK Courier
           <i className="fab fa-firstdraft" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
@@ -77,11 +79,7 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              to="/faq"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
+            <Link to="/faq" className="nav-links" onClick={closeMobileMenu}>
               FAQ
             </Link>
           </li>
@@ -95,18 +93,12 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link
-              to="/sign-up"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
+            <Link to="/sign-up" className="nav-links" onClick={closeMobileMenu}>
               <i className="fa fa-user"></i> Sign Up
             </Link>
           </li>
         </ul>
-      
       </nav>
-   
     </>
   );
 }

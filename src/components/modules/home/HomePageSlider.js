@@ -68,7 +68,7 @@ const HomePageSlider = () => {
             title={m.title}
             subtitle={m.description}
             image={m.image}
-            url={m.url}
+            url={"/contact-us"}
           />
         ))}
     </Slider>

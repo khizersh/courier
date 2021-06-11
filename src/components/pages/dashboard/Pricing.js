@@ -8,14 +8,15 @@ import {
   getAllCity,
   getAllService,
   getAllWeight,
+  getAllzones,
 } from "../../data/httpService";
 import CardLayout from "../../modules/dashboard/CardLayout";
 
 const Pricing = () => {
   const [data, setData] = useState({
     id: "",
-    city: "",
-    cityId: "",
+    zone: "",
+    zoneId: "",
     service: "",
     serviceId: "",
     weight: "",
@@ -23,7 +24,7 @@ const Pricing = () => {
     rate: "",
   });
   const [row, setRow] = useState([]);
-  const [city, setCity] = useState([]);
+  const [zone, setZone] = useState([]);
   const [service, setService] = useState([]);
   const [weight, setWeight] = useState([]);
   const [edit, setEdit] = useState(false);
@@ -54,7 +55,7 @@ const Pricing = () => {
         swal({ title: "Select please!", timer: 2500, icon: "error" });
       }
     } else {
-      if (!data.serviceId || !data.weightId || !data.cityId || !data.rate) {
+      if (!data.serviceId || !data.weightId || !data.zoneId || !data.rate) {
         return swal({
           title: "Enter all fields!",
           timer: 2500,
@@ -123,8 +124,8 @@ const Pricing = () => {
   const onChangeService = (m) => {
     setData({ ...data, serviceId: m.target.value });
   };
-  const onChangeCity = (m) => {
-    setData({ ...data, cityId: m.target.value });
+  const onChangeZone = (m) => {
+    setData({ ...data, zoneId: m.target.value });
   };
   const onChangeWeight = (m) => {
     setData({ ...data, weightId: m.target.value });
@@ -140,10 +141,10 @@ const Pricing = () => {
       .catch((e) => console.log(e));
 
     //   get all city
-    getAllCity()
+    getAllzones()
       .then((r) => {
         if (r.data && r.data.statusCode == 1) {
-          setCity(r.data.data);
+          setZone(r.data.data);
         }
       })
       .catch((e) => console.log(e));
@@ -193,18 +194,18 @@ const Pricing = () => {
           </div>
           <div className="col-lg-6 col-12">
             <div className="form-group">
-              <label>Select City</label>
+              <label>Select Zone</label>
               <div className="form-group">
                 <select
                   className="form-control"
                   id="courier-type-box"
-                  onChange={onChangeCity}
+                  onChange={onChangeZone}
                 >
-                  <option>Select City</option>
-                  {city.length &&
-                    city.map((m, i) => (
+                  <option>Select Zone</option>
+                  {zone.length &&
+                    zone.map((m, i) => (
                       <option key={i} value={m.id}>
-                        {m.city}
+                        {m.zone}
                       </option>
                     ))}
                 </select>
@@ -224,7 +225,9 @@ const Pricing = () => {
                   {weight.length &&
                     weight.map((m, i) => (
                       <option key={i} value={m.id}>
-                        {m.weight}
+                        {m.startWeight
+                          ? m.startWeight + " - " + m.endWeight
+                          : m.defaultWeight + " (Default)"}
                       </option>
                     ))}
                 </select>
@@ -256,7 +259,7 @@ const Pricing = () => {
               <tr className="text-center">
                 <th scope="col">#</th>
                 <th scope="col">Service</th>
-                <th scope="col">City</th>
+                <th scope="col">Zone</th>
                 <th scope="col">Weight (Kg)</th>
                 <th scope="col">Price (Rs)</th>
                 <th scope="col">Actions</th>
@@ -268,7 +271,7 @@ const Pricing = () => {
                   <tr key={i} className="text-center">
                     <th scope="row">{i + 1}</th>
                     <td>{m.service}</td>
-                    <td>{m.city}</td>
+                    <td>{m.zone}</td>
                     <td>{m.weight}</td>
                     <td>{m.rate} </td>
                     <td className="">

@@ -12,6 +12,7 @@ import Clients from "../modules/home/Clients";
 import DealSlider from "../modules/home/DealSlider";
 import NewsCard from "../modules/news/NewsCard";
 import NewsComp from "../modules/news/NewsComp";
+import { homePageService } from "../data/serviceDetail";
 
 export default function Home() {
   return (
@@ -19,18 +20,18 @@ export default function Home() {
       <HomePageSlider />
       <div className="container">
         <div className="row mbl-mar">
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          {homePageService.length
+            ? homePageService.map((m, i) => <ServiceCard data={m} key={i} />)
+            : ""}
         </div>
       </div>
 
       <div className="container-fluid bg-777 neg-top-margin">
         <div className="container">
-        <div className="row mb-3 text-center-mbl">
+          <div className="row mb-3 text-center-mbl">
             <h2 className="text-center-mbl">Latest News</h2>
           </div>
-          <div >
+          <div>
             <NewsComp />
           </div>
         </div>

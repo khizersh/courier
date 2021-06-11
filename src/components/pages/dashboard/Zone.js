@@ -110,7 +110,7 @@ const Zone = () => {
               <label>Zone</label>
               <input
                 className="form-control"
-                placeholder="Enter email"
+                placeholder="Enter zone"
                 name="zone"
                 value={data.zone}
                 onChange={onChange}

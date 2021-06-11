@@ -9,15 +9,22 @@ import {
 import CardLayout from "../../modules/dashboard/CardLayout";
 
 const Weight = () => {
+
   const [data, setData] = useState({
     id: "",
-    weight: 0,
+    startWeight: 0,
+    endWeight: 0,
+    defaultCheck: false,
+    defaultWeight: 0,
   });
   const [row, setRow] = useState([]);
   const [edit, setEdit] = useState(false);
 
-
   const onClick = () => {
+    console.log("data ", data);
+    if (+data.startWeight > +data.endWeight) {
+      return swal({ title: "Invalid number", icon: "error", timer: 2500 });
+    }
     if (edit) {
       if (data.id) {
         editWeight(data)
@@ -68,6 +75,9 @@ const Weight = () => {
   const onChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
+  const onChangeDefault = (e) => {
+    setData({ ...data, defaultCheck: !data.defaultCheck });
+  };
   const onClickEdit = (m) => {
     setEdit(true);
     setData(m);
@@ -108,19 +118,60 @@ const Weight = () => {
         <div className="row">
           <div className="col-lg-6 col-12">
             <div className="form-group">
-              <label>Weight</label>
+              <label>Start Weight</label>
               <input
                 className="form-control"
                 placeholder="Enter weight"
                 type="number"
-                name="weight"
-                value={data.weight}
+                name="startWeight"
+                value={data.startWeight}
                 onChange={onChange}
               />
             </div>
           </div>
+          <div className="col-lg-6 col-12">
+            <div className="form-group">
+              <label>Start Weight</label>
+              <input
+                className="form-control"
+                placeholder="Enter weight"
+                type="number"
+                name="endWeight"
+                value={data.endWeight}
+                onChange={onChange}
+              />
+            </div>
+          </div>
+          <div className="col-lg-6 col-12">
+            <div class="form-check mt-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                onChange={onChangeDefault}
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Default Weight
+              </label>
+            </div>
+          </div>
+          {data && data.defaultCheck ? (
+            <div className="col-lg-6 col-12">
+              <div className="form-group">
+                <label>Default Weight</label>
+                <input
+                  className="form-control"
+                  placeholder="Enter weight"
+                  type="number"
+                  name="defaultWeight"
+                  value={data.defaultWeight}
+                  onChange={onChange}
+                />
+              </div>
+            </div>
+          ) : null}
 
-          <div className=" col-lg-6 col-12 text-center">
+          <div className="col-12 text-center">
             <button type="submit" className="btn" onClick={onClick}>
               Submit
             </button>
@@ -132,7 +183,10 @@ const Weight = () => {
             <thead>
               <tr className="text-center">
                 <th scope="col">#</th>
-                <th scope="col">Weight</th>
+                <th scope="col">Start Weight</th>
+                <th scope="col">End Weight</th>
+                <th scope="col">Default</th>
+                <th scope="col">Default Weight</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
@@ -141,7 +195,10 @@ const Weight = () => {
                 row.map((m, i) => (
                   <tr key={i} className="text-center">
                     <th scope="row">{i + 1}</th>
-                    <td>{m.weight}</td>
+                    <td>{m.startWeight ? m.startWeight  : m.startWeight == 0 ? "0" : "--"}</td>
+                    <td>{m.endWeight || "--"}</td>
+                    <td>{m.defaultCheck ? "Yes" : "No" }</td>
+                    <td>{m.defaultWeight || "--"}</td>
                     <td className="">
                       <a
                         className="pl-3 text-primary"

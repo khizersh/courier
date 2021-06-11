@@ -32,11 +32,18 @@ const ServiceDetail = () => {
           </div>
           <div className="col-12 col-lg-8">
             <div className="single-service">
-              <h2>{data && data.title}</h2>
-              <p className="text-muted">{data && data.description}</p>
+            <h2>{data && data.title}</h2>
+              {data && (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: data.description,
+                  }}
+                />
+              )}
+             
             </div>
             <hr />
-            {data && (
+            {data && data.image1 && data.image2 && (
               <div className="row mb-5">
                 <div className="col-6">
                   <img src={data.image1} width="100%" height="230px" />

@@ -5,18 +5,16 @@ import { useCountUp } from "react-countup";
 
 const CustomerCount = () => {
   const data = [
-    { heading: "2150", span: "+", desc: "Satisfied Clients" },
-    { heading: "100 ", span: "", desc: "Offices Worldwide" },
-    { heading: "55 ", span: "", desc: "Countries Covered" },
+    { heading: "220 ", span: "+", desc: "Worldwide Destinations" },
+    { heading: "3500 ", span: "+", desc: "Nationwide Destinations" },
     { heading: "4.6", span: "", desc: "Reviews" },
   ];
   const [office, setOffice] = useState(45);
   const [country, setCountry] = useState(55);
   const [review, setReview] = useState(4.3);
   let cli = Math.floor(Math.random() * 2150) + 1800;
-  
+
   const { countUp } = useCountUp({ end: cli, delay: 0, start: 0 });
- 
 
   return (
     <div className="facts-main-block">
@@ -24,31 +22,22 @@ const CustomerCount = () => {
         <div className="row">
           <div className="col-12 col-md-3">
             <div className="facts-block text-center">
-              <h1 className="facts-heading">
-              { countUp }
-              </h1>
+              <h1 className="facts-heading">{countUp}</h1>
               <span>+</span>
-              <div className="facts-dtl">Satisfied Clients</div>
+              <div className="facts-dtl">Satisfied Customer</div>
             </div>
           </div>
-          <div className="col-12 col-md-3">
-            <div className="facts-block text-center">
-              <h1 className="facts-heading">{office}</h1>
-              <div className="facts-dtl">Offices Worldwide</div>
-            </div>
-          </div>
-          <div className="col-12 col-md-3">
-            <div className="facts-block text-center">
-              <h1 className="facts-heading">{country}</h1>
-              <div className="facts-dtl">Countries Covered</div>
-            </div>
-          </div>
-          <div className="col-12 col-md-3">
-            <div className="facts-block text-center">
-              <h1 className="facts-heading">{review}</h1>
-              <div className="facts-dtl">Reviews</div>
-            </div>
-          </div>
+          {data.length
+            ? data.map((m, i) => (
+                <div className="col-12 col-md-3">
+                  <div className="facts-block text-center">
+                    <h1 className="facts-heading">{m.heading}</h1>
+                    <span>{m.span}</span>
+                    <div className="facts-dtl">{m.desc}</div>
+                  </div>
+                </div>
+              ))
+            : ""}
         </div>
       </div>
     </div>

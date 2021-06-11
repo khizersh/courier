@@ -1,22 +1,27 @@
 export const MenuItems = [
   {
-    title: 'Marketing',
-    path: '/marketing',
+    title: 'Same Day Service',
+    path: '/service-detail/same-day-service',
     cName: 'dropdown-link'
   },
   {
-    title: 'Consulting',
-    path: '/consulting',
+    title: 'Overnight service',
+    path: '/service-detail/overnight-service',
     cName: 'dropdown-link'
   },
   {
-    title: 'Design',
-    path: '/design',
+    title: 'Detain Service',
+    path: '/service-detail/detain-service',
     cName: 'dropdown-link'
   },
   {
-    title: 'Development',
-    path: '/development',
+    title: 'Gift Delivery Service',
+    path: '/service-detail/gift-service',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'View All',
+    path: '/services',
     cName: 'dropdown-link'
   }
 ];

@@ -13,7 +13,7 @@ const MessageModal = ({ open, setOpen, data }) => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-        style={{ marginTop: "9%" }}
+        style={{ marginTop: "3%" }}
       >
         <h5 className="text-center">Message Info</h5>
         <Modal.Body className="bg-tracking">

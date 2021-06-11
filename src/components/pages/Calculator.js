@@ -59,6 +59,9 @@ const Calculator = () => {
       if (res && res.data.statusCode == 1 && res.data.data.rate) {
         setShow(true);
         setPrice(res.data.data.rate);
+        document
+          .getElementsByClassName("show")[0]
+          .scrollIntoView({ behavior: "smooth" });
       } else {
         return swal({
           title: "No record found!",
@@ -199,15 +202,15 @@ const Calculator = () => {
               <a>
                 <i className="fa fa-mobile fa-2x pr-2"></i>
               </a>
-              We are available at Mon-Fri call us <a>+ 212-4000-300</a> during
-              regular business hours
+              We are available at Mon-Fri call us <a>03082256517</a> |{" "}
+              <a> 03128486210</a> during regular business hours
             </p>
           </div>
         </div>
       </div>
 
-      {show && (
-        <div id="show" className="container mt-3 card">
+      <div id="show" className="container mt-3 card show">
+        {show && (
           <div className="row  bg p-5">
             <div className="border m-auto bg-white">
               <div className="row ">
@@ -227,8 +230,8 @@ const Calculator = () => {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

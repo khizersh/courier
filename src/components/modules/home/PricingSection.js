@@ -6,29 +6,32 @@ const PricingSection = () => {
   const data = [
     {
       package: "Basic",
-      price: "$50",
+      price: "Rs 280.00",
+      subtitle:"Overnight",
       array: [
-        { title: "Product weight", value: "3KG - 5Kg" },
+        { title: "Product weight", value: "Per Kg" },
         { title: "Country", value: "All" },
-        { title: "Duration", value: "7-14 days" },
-      ],
-    },
-    {
-      package: "Premium",
-      price: "$100",
-      array: [
-        { title: "Product weight", value: "3KG - 5Kg" },
-        { title: "Country", value: "All" },
-        { title: "Duration", value: "7-14 days" },
+        { title: "Duration", value: "Next Day" },
       ],
     },
     {
       package: "Standard",
-      price: "$30",
+      price: "Rs 220.00",
+      subtitle: "Cargo",
       array: [
-        { title: "Product weight", value: "3KG - 5Kg" },
+        { title: "Product weight", value: "Per Kg" },
         { title: "Country", value: "All" },
-        { title: "Duration", value: "7-14 days" },
+        { title: "Duration", value: "1 Day+" },
+      ],
+    },
+    {
+      package: "Basic",
+      price: "Rs 80.00",
+      subtitle: "Detain",
+      array: [
+        { title: "Product weight", value: "Min 5Kg" },
+        { title: "Country", value: "All" },
+        { title: "Duration", value: "36 to 72 Hours" },
       ],
     },
   ];

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./slider.css";
 
-const ServiceCard = () => {
+const ServiceCard = ({ data }) => {
+  const [more, setMore] = useState(false);
+
+  const onClickMore = () => {
+    setMore(!more);
+  };
+
   return (
     <div className="col-lg-4 col-md-12 mar-bot">
       <div className="about-block">
@@ -11,19 +17,22 @@ const ServiceCard = () => {
             <img />
           </div>
           <div className="about-point-dtl">
-            <p className="text-white">SERVICE 01</p>
-            <p className="text-white">Descritpion</p>
+            <p className="text-white">{data.title}</p>
+            <p className="text-white">{data.description}</p>
+            <p
+              className="text-white"
+              style={{ marginTop: "-17px", fontSize: "13px" }}
+            >
+              {data.subDesc}{" "}
+            </p>
           </div>
         </div>
       </div>
       <div className="about-type text-muted ">
-        <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content page.
-        </p>
-        <Link>
+        <p> {more ? data.para : data.para.slice(0, 70) + "..."} </p>
+        <a className="cursor-pointer" onClick={onClickMore}>
           Read more <i className="fas fa-arrow-right pl-2"></i>
-        </Link>
+        </a>
       </div>
     </div>
   );

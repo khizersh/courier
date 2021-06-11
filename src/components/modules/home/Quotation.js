@@ -129,7 +129,9 @@ const Quotation = () => {
         </div>
         <div className="row car pb-3">
           <div className="col-12 text-center mbl-full-width">
-            <Button className="mbl-full-width" onClick={onClick}>SEND REQUEST</Button>
+            <Button className="mbl-full-width" onClick={onClick}>
+              SEND REQUEST
+            </Button>
           </div>
         </div>
         <div className="row">
@@ -139,8 +141,8 @@ const Quotation = () => {
               <a>
                 <i className="fa fa-mobile fa-2x pr-2"></i>
               </a>
-              We are available at Mon-Fri call us <a>+ 212-4000-300</a> during
-              regular business hours
+              We are available at Mon-Fri call us <a>03082256517</a> |{" "}
+              <a> 03128486210</a> during regular business hours
             </p>
           </div>
         </div>

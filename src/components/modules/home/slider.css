@@ -107,6 +107,10 @@
   vertical-align: top;
 }
 
+.cursor-pointer:hover{
+  cursor: pointer;
+}
+
 .about-type {
   padding: 40px 55px;
   background-color: #efe7e7;

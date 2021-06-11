@@ -1,13 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
-import image1 from "../../../images/homeslider/img1.png";
-import image2 from "../../../images/homeslider/img2.png";
-import image3 from "../../../images/homeslider/img3.png";
-import image4 from "../../../images/homeslider/img4.png";
-import image5 from "../../../images/homeslider/img5.png";
-import image6 from "../../../images/homeslider/img6.png";
-import image7 from "../../../images/homeslider/img7.png";
-import image8 from "../../../images/homeslider/img8.png";
+import image1 from "../../../images/homeslider/c1.jpg";
+import image2 from "../../../images/homeslider/c2.png";
+import image3 from "../../../images/homeslider/c3.jpg";
+import image4 from "../../../images/homeslider/c4.jpg";
+import image5 from "../../../images/homeslider/c5.png";
+import image6 from "../../../images/homeslider/c6.png";
+import image7 from "../../../images/homeslider/c7.jpg";
+import image8 from "../../../images/homeslider/c8.png";
 import "./home.css";
 
 const Clients = () => {
@@ -78,8 +78,8 @@ const Clients = () => {
         <Slider {...settings}>
           {data.length &&
             data.map((m, i) => (
-              <div key={i} className="cursor-poimter">
-                <img src={m.url} alt="" style={{ width: 100 }} />
+              <div key={i} className="cursor-pointer m-auto text-center">
+                <img src={m.url} alt="" style={{ width: '90px' , height:'70px'}} />
               </div>
             ))}
         </Slider>

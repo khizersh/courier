@@ -1,4 +1,4 @@
-import service1 from "../../images/homeslider/slide1.jpg";
+import service1 from "../../images/homeslider/slide3.jpg";
 import image1 from "../../images/service/service1.jpg";
 import image2 from "../../images/service/service2.jpg";
 

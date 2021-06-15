@@ -1,22 +1,44 @@
-.track{
-    background-color: #f1f1f1;
-    padding: 1.4rem;
+.track {
+  background-color: #f1f1f1;
+  padding: 1.4rem;
 }
 
-.bg{
-    background-color: #f1f1f1;
+.mar-x {
+  margin: auto 3rem;
 }
 
-.bg-white{
-    background-color: white;
-}
-.border{
-    border-radius: .4rem;
-    border: .1rem solid #b5b5b5;
-    margin-bottom: 2.1rem;
-    padding: 2.1rem 2.1rem 2.1rem 1.4rem;
+.bg {
+  background-color: #f1f1f1;
 }
 
-.color-orange{
-    color: #12610f;
+.bg-white {
+  background-color: white;
+}
+.pad-5 {
+  padding: 3rem;
+}
+.border {
+  border-radius: 0.4rem;
+  border: 0.1rem solid #b5b5b5;
+  margin-bottom: 2.1rem;
+  padding: 2.1rem 2.1rem 2.1rem 1.4rem;
+}
+
+.color-orange {
+  color: #12610f;
+}
+
+.txt-class {
+  font-size: 14px !important;
+  height: 48px !important;
+}
+
+@media screen and (max-width: 999px) {
+  .mar-x {
+    margin: auto 0rem;
+  }
+  
+  .pad-5 {
+    padding: 0px !important;
+  }
 }

@@ -11,3 +11,4 @@ export const NEWS = BASEURL + "api/news";
 export const BANNER = BASEURL + "api/banner";
 export const MESSAGE = BASEURL + "api/message";
 export const OFFER = BASEURL + "api/offer";
+export const TRACK =  "http://pdhscourier.com/pdhs/track_parcel.php";

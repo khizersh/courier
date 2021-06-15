@@ -39,9 +39,9 @@ import Offer from "./components/pages/dashboard/Offer";
 function App(props) {
   const [check, setCheck] = useState(false);
 
-  // setTimeout(() => {
-  //   setCheck(true);
-  // }, 2000);
+  setTimeout(() => {
+    setCheck(true);
+  }, 2000);
 
   function ScrollToTop(props) {
     const { pathname } = useLocation();
@@ -80,8 +80,8 @@ function App(props) {
           </DashboardLayout>
         ) : (
           <MainLayout>
-            {check && <TrackingModal check={true} />}
-            {/* <Headline /> */}
+            {/* {check && <TrackingModal check={true} />} */}
+            <Headline />
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/tracking/:id" exact component={Tracking} />

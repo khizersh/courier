@@ -20,6 +20,7 @@ const Quotation = () => {
           if (res.data.statusCode == 1) {
             return swal({
               title: res.data.message,
+              text:'We will contact you soon!',
               timer: 2500,
               icon: "success",
             }).then((e) =>

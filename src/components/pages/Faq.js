@@ -7,27 +7,70 @@ const data = {
   title: "Most Asked Questions",
   rows: [
     {
-      title: "Lorem ipsum dolor sit amet,",
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-              Fusce sed commodo purus, at tempus turpis.`,
+      title:
+        "What happens if the consignee is not available at home/delivery address?",
+      content: (
+        <p>
+          If the consignee is not available at the given address, our courier
+          will deliver the shipment to a person who is available and will take
+          down the signatures and relation of that person to the consignee. In
+          case no one is available at the given address or if the address is
+          closed, our courier would leave a message card for the consignee.
+          After coordinating with the consignee, our courier will make a second
+          attempt the following day. However, certain sensitive shipments
+          governed by shipper regulations can only be received either by
+          consignee or his/her blood relative at given address.
+        </p>
+      ),
     },
     {
-      title: "Nunc maximus, magna at ultricies elementum",
-      content:
-        "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+      title:
+        "In case a shipment is lost; will PDHS be liable to give us the market value of the good that has been lost?",
+      content: (
+        <p>
+          If the shipment is insured then yes, PDHS is liable to pay the market
+          value of the lost shipment. If the shipment is not insured, then the
+          liability of PDHS is limited as mentioned in the terms & conditions of
+          carriage.
+        </p>
+      ),
     },
     {
-      title: "Curabitur laoreet, mauris vel blandit fringilla",
-      content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+      title: "How does shipper know if his shipment is dutiable?",
+      content: (
+        <p>
+          Each country establishes its own standards as to which goods are
+          considered dutiable. For further details, please call us at
+          922134322571.
+        </p>
+      ),
     },
     {
-      title: "What is the package version",
-      content: <p>current version is 1.2.1</p>,
+      title:
+        "What happens if an international shipment is pending and no new details are provided?",
+      content: (
+        <p>
+          On all such pending shipments, the shipper will have to send new
+          details within 5 working days from the date informed. If not, then
+          shipper will have to abandon the shipment and it will be destroyed or
+          disposed off. However, shipper still remains liable for all additional
+          costs (including duty and taxes).
+        </p>
+      ),
+    },
+    {
+      title: "How do I find out the domestic rates?",
+      content: (
+        <p>
+          For domestic rates, use the Rate Calculator under Quick Start on
+          homepage.
+          <br />
+          Alternatively, follow the steps below on homepage
+          <br />
+          Please note that the rates given are not final and are subject to
+          changes. PDHS will share the final rates at the time of pick-up.
+        </p>
+      ),
     },
   ],
 };
@@ -49,7 +92,7 @@ const config = {
 const FaqComponent = () => {
   useEffect(() => {
     // console.log(document.title);
-    document.title = "FAQ"
+    document.title = "FAQ";
   }, []);
   return (
     <div

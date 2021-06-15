@@ -1,5 +1,6 @@
 import React from 'react'
 import "./service.css"
+import { Link } from "react-router-dom";
 
 const Helpine = () => {
     return (
@@ -7,7 +8,7 @@ const Helpine = () => {
         <div className="helpline-content text-center">
             <h4>Need Consultancy Help</h4>
             <p className="text-white">Gatherin galso sprit moving shall flow</p>
-            <button className="btn btn-primary" type="submit">Contact Us</button>
+            <Link to="/contact-us" className="btn btn-primary" >Contact Us</Link>
         </div>
     </div>
     )

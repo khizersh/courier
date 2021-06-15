@@ -2,7 +2,7 @@
   background: red !important;
   width: 200px !important;
   position: absolute !important;
-  top: 54px !important;
+  top: 68px !important;
   list-style: none !important;
   text-align: start !important;
 }
@@ -26,10 +26,10 @@
   height: 100% !important;
   width: 100% !important;
   text-decoration: none !important;
-  color: #777 !important;
+  color: black !important;
   padding: 16px !important;
-  font-weight: lighter;
-  font-family: 'FontAwesome' !important;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .dropdown-link:hover {

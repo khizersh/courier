@@ -12,13 +12,23 @@
     display: inline-block;
   }
   
-  
+  a .fa , span{
+    color: white;
+  }
+ 
   
   .list-inline {
     padding-left: 0;
     list-style: none;
   }
   
+  .hov-green{
+    color: white;
+  }
+  
+  .hov-green:hover{
+    color: #12610f !important;
+  }
   .list-inline-item i {
     font-size: 15px;
     padding-left: 10px;

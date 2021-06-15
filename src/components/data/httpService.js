@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BANNER, CITY, HEADLINE, MESSAGE, NEWS, OFFER, PRICE, SERVICE, WEIGHT, ZONE } from "./ApiLinks";
+import { BANNER, CITY, HEADLINE, MESSAGE, NEWS, OFFER, PRICE, SERVICE, TRACK, WEIGHT, ZONE } from "./ApiLinks";
 
 // zone
 export const getAllzones = async () => {
@@ -157,6 +157,15 @@ export const removeOffer = async (id) => {
 
 export const calculatePrice = async (body) => {
   return post(PRICE + "/calculate", body);
+};
+
+// TRACK
+
+export const trackOrder = async (city , code) => {
+ var form = new FormData();
+ form.append("from_city",city)
+ form.append("cn_no",code)
+  return post(TRACK + "/calculate", form);
 };
 
 

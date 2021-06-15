@@ -7,6 +7,8 @@ import s4 from "../../../images/service/service3.jpg";
 import s5 from "../../../images/service/service4.jpg";
 import s6 from "../../../images/service/service5.jpg";
 import s1 from "../../../images/service/service6.jpg";
+import s7 from "../../../images/service/gift.jpg";
+import s8 from "../../../images/service/customClear.jpg";
 
 const ServiceDetailCard = () => {
   const data = [
@@ -35,7 +37,7 @@ const ServiceDetailCard = () => {
         "<p>This service is provided on heavy consignment movement which is not time sensitive, the detained shipments are delivered in 48 to 72 hours around country in this segment the rates are very competitive for bulk shippers</p>",
     },
     {
-      image: s4,
+      image: s7,
       num: "04",
       title: "Feelings Express (Gift Delivery Service)",
       description:
@@ -65,7 +67,7 @@ const ServiceDetailCard = () => {
         "</ul>",
     },
     {
-      image: s5,
+      image: s4,
       num: "07",
       title: "FREIGHT FORWARDING",
       link: "frieght-forwarding",
@@ -73,7 +75,7 @@ const ServiceDetailCard = () => {
         "<p>We entrust our cargo only with good hands, therefore together with our trusted, reliable and efficient overseas agents we will forward any cargo to all destination worldwide in the most effective way, at the economical price.</p>",
     },
     {
-      image: s6,
+      image: s8,
       num: "08",
       title: "CUSTOM CLEARENCE",
       link: "custom-clearance",

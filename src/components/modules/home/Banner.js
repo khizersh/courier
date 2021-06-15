@@ -13,7 +13,7 @@ const Banner = ({ subtitle, title, image, url }) => {
       >
         <div className="container z-999 m-auto">
           <div className="row">
-            <div className="col-12 col-md-8">
+            <div className="col-md-8  col-12  col-sm-12">
               <h5 className="slider-subtitle">{subtitle}</h5>
               <h1 className="slider-heading">{title}</h1>
               <Link to={url} className="btn-dark bg-white">

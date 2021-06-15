@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Dropdown from "./Dropdown";
-import Headline from "../news/Headline";
-import logo from "../../../images/logo.jpg";
+import logo from "../../../images/logo.png";
+import user from "../../../images/user.png";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -34,8 +33,8 @@ function Navbar() {
     <>
       <nav className="navbar sticky-top ">
         <Link to="/" className="navbar-logo mb-3" onClick={closeMobileMenu}>
-          {/* <img src={logo} width="200px"/> */}ZAK Courier
-          <i className="fab fa-firstdraft" />
+          <img src={logo} width="150px" height="50px"/>
+          {/* <i className="fab fa-firstdraft" /> */}
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -94,7 +93,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link to="/sign-up" className="nav-links" onClick={closeMobileMenu}>
-              <i className="fa fa-user"></i> Sign Up
+              <img src={user} alt="user"/>
             </Link>
           </li>
         </ul>

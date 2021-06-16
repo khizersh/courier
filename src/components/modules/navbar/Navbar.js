@@ -33,7 +33,7 @@ function Navbar() {
     <>
       <nav className="navbar sticky-top ">
         <Link to="/" className="navbar-logo mb-3" onClick={closeMobileMenu}>
-          <img src={logo} width="150px" height="50px"/>
+          <img src={logo} width="150px" height="50px" className="logo-img"/>
           {/* <i className="fab fa-firstdraft" /> */}
         </Link>
         <div className="menu-icon" onClick={handleClick}>

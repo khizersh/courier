@@ -17,6 +17,15 @@
 .pad-5 {
   padding: 3rem;
 }
+
+.info td{
+  font-family: sans-serif;
+}
+
+.color-red{
+  color: red;
+}
+
 .border {
   border-radius: 0.4rem;
   border: 0.1rem solid #b5b5b5;

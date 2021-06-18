@@ -165,7 +165,7 @@ export const trackOrder = async (city , code) => {
  var form = new FormData();
  form.append("from_city",city)
  form.append("cn_no",code)
-  return post(TRACK + "/calculate", form);
+  return post(TRACK, form);
 };
 
 

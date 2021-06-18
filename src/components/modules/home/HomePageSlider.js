@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Slider from "react-slick";
 import Banner from "./Banner";
 import slide1 from "../../../images/homeslider/slide1.jpg";
@@ -6,6 +6,7 @@ import slide2 from "../../../images/homeslider/slide2.jpg";
 import slide3 from "../../../images/homeslider/slide3.jpg";
 import "./slider.css";
 import { getAllBanner } from "../../data/httpService";
+import { MainContext } from "../../context/MainContext";
 
 const HomePageSlider = () => {
   var settings = {
@@ -20,27 +21,30 @@ const HomePageSlider = () => {
       {
         breakpoint: 1024,
         settings: {
-          arrows:false,
+          arrows: false,
           dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-   
         },
       },
-    ]
+    ],
   };
-
+  const { setLoader } = useContext(MainContext);
   const [data, setData] = useState([]);
   useEffect(() => {
+    setLoader(true);
     getAllBanner()
       .then((r) => {
         if (r.data && r.data.statusCode == 1) {
           setData(r.data.data);
-          console.log(r.data.data);
         }
+        setLoader(false);
       })
-      .catch((e) => setData(staticdata));
+      .catch((e) => {
+        setLoader(false);
+        setData(staticdata);
+      });
   }, []);
 
   const staticdata = [

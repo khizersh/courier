@@ -1,5 +1,5 @@
-export const BASEURL = "http://localhost:9999/";
-// export const BASEURL = "https://phds-backend.herokuapp.com/";
+// export const BASEURL = "http://localhost:9999/";
+export const BASEURL = "https://pdhs-backend.herokuapp.com/";
 
 export const ZONE = BASEURL + "api/zone";
 export const CITY = BASEURL + "api/city";

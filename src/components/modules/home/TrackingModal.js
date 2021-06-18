@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
 import { Modal, Button, InputGroup, FormControl } from "react-bootstrap";
 import "./home.css";
 import { useHistory } from "react-router-dom";
@@ -6,6 +6,7 @@ import bg from "../../../images/homeslider/bg_map.jpg";
 import { trackData } from "../../data/trackData";
 import swal from "sweetalert";
 import { trackOrder } from "../../data/httpService";
+import { MainContext } from "../../context/MainContext";
 
 const TrackingModal = ({ check }) => {
   const router = useHistory();
@@ -16,18 +17,17 @@ const TrackingModal = ({ check }) => {
     from_city: "",
     cn_no: "",
   });
+  const { setLoader } = useContext(MainContext);
+
 
   const onChangeCity = (e) => {
-    console.log("e.  :", e.target.value);
     setData({ ...data, from_city: e.target.value });
   };
   const onChangeCode = (e) => {
-    console.log("e.  :", e.target.value);
     setData({ ...data, cn_no: e.target.value });
   };
 
   const onClick = () => {
-    console.log("click: ",data);
     if (!data.cn_no || !data.from_city) {
       return swal({
         title: "Please enter all fields!",
@@ -35,26 +35,39 @@ const TrackingModal = ({ check }) => {
         icon: "error",
       });
     }
-
-    trackOrder(data.from_city, data.cn_no)
-      .then((res) => {
-        console.log("resss: ", res);
+    setLoader(true)
+    
+    let from_city = data.from_city.split(">")[0].trim();
+    trackOrder(from_city, data.cn_no)
+    .then((res) => {
+      if (res && res.data) {
+          setLoader(false)
+          router.push({
+            pathname: "/tracking",
+            state: {
+              ...res.data,
+              trackingNumber: data.cn_no,
+            },
+          });
+        }
       })
       .catch((e) =>
+      {  
+        setLoader(false)
         swal({
           title: "Something went wrong!",
           timer: 2000,
           icon: "error",
-        })
+        })}
       );
     setShow(false);
-    router.push("/tracking/123");
+  
   };
 
   return (
     <>
       <div className="track-btn">
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="success" onClick={handleShow}>
           Track <i className="fas fa-truck-moving"></i>
         </Button>
       </div>
@@ -64,6 +77,7 @@ const TrackingModal = ({ check }) => {
           onHide={handleClose}
           backdrop="static"
           keyboard={false}
+          className="marginTop"
         >
           <Modal.Body
             className="bg-tracking"
@@ -74,7 +88,7 @@ const TrackingModal = ({ check }) => {
               <FormControl
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-sm"
-                placeholder="Enter your tracking number."
+                placeholder="Enter your tracking number"
                 className="txt-class"
                 onChange={onChangeCode}
               />
@@ -83,6 +97,7 @@ const TrackingModal = ({ check }) => {
                 className="form-control txt-class"
                 onChange={onChangeCity}
               >
+                <option>Select City</option>
                 {trackData && trackData.length
                   ? trackData.map((m, i) => (
                       <option key={i} value={m}>
@@ -93,11 +108,13 @@ const TrackingModal = ({ check }) => {
               </select>
             </InputGroup>
             <div className="text-center mt-2">
-              <Button onClick={onClick}>Track</Button>
+              <Button variant="success" onClick={onClick}>
+                Track
+              </Button>
             </div>
           </Modal.Body>
 
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="danger" onClick={handleClose}>
             Close
           </Button>
         </Modal>

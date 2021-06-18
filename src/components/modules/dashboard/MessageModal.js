@@ -5,7 +5,6 @@ const MessageModal = ({ open, setOpen, data }) => {
   const [show, setShow] = useState(open);
   const handleClose = () => setShow(false);
 
-  console.log(data);
   return (
     <div>
       <Modal

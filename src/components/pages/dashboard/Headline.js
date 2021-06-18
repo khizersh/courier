@@ -118,7 +118,7 @@ const Headline = () => {
           </div>
 
           <div className=" col-lg-12 col-12 text-center">
-            <button type="submit" className="btn" onClick={onClick}>
+            <button type="submit" className="btn btn-danger" onClick={onClick}>
               Submit
             </button>
           </div>

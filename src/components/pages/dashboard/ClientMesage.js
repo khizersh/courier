@@ -95,7 +95,6 @@ const ClientMessage = () => {
     setModal(!modal);
   };
   const onClickMessage = (m) => {
-    console.log(m);
     setsingleData(m);
     setModal(!modal);
   };

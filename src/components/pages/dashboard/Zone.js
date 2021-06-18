@@ -86,7 +86,7 @@ const Zone = () => {
         return swal({
           title: re.data.message,
           timer: 2500,
-          icon: "erro",
+          icon: "error",
         });
       }
     });
@@ -130,7 +130,7 @@ const Zone = () => {
             </div>
           </div>
           <div className=" col-12 text-center">
-            <button type="submit" className="btn" onClick={onClick}>
+            <button type="submit" className="btn btn-danger" onClick={onClick}>
               Submit
             </button>
           </div>

@@ -26,7 +26,7 @@ const Stations = () => {
       <div className="row ">
         {row.length
           ? row.map((m, i) => (
-              <div className="col-6 col-md-3" key={i}>
+              <div className="col-12 col-md-3" key={i}>
                 <h3 className="stationHeading">
                   Zone {m.zone} <span className="subtitle">({m.subtitle})</span>{" "}
                 </h3>

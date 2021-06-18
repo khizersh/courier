@@ -166,7 +166,7 @@ const City = () => {
             </div>
           </div>
           <div className=" col-12 text-center">
-            <button type="submit" className="btn" onClick={onClick}>
+            <button type="submit" className="btn btn-danger" onClick={onClick}>
               Submit
             </button>
           </div>

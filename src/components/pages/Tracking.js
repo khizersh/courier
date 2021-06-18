@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { trackOrder } from "../data/httpService";
 import swal from "sweetalert";
 import { MainContext } from "../context/MainContext";
+import { Helmet } from "react-helmet";
 
 const Tracking = () => {
   const router = useHistory();
@@ -88,6 +89,11 @@ const Tracking = () => {
 
   return (
     <div className="container my-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pdhscourier | Tracking</title>
+        <meta name="title" content="Pdhs courier Track your order" />
+      </Helmet>
       <div className="row">
         <div className="col-12 p-3 track">
           <div className="row mar-x">

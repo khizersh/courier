@@ -5,6 +5,7 @@ import { getServiceByName } from "../data/helper";
 import "../../components/modules/service/service.css";
 import QuestionSide from "../modules/service/QuestionSide";
 import Helpine from "../modules/service/Helpine";
+import { Helmet } from "react-helmet";
 
 const ServiceDetail = () => {
   const { page } = useParams();
@@ -13,10 +14,19 @@ const ServiceDetail = () => {
   useEffect(() => {
     let d = getServiceByName(page);
     setData(d);
-    console.log("ddd: ", d);
   }, [page]);
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Pdhscourier | {`${data ? data.title : "Courier Service"}`}
+        </title>
+        <meta
+          name={`${data ? data.title : "Courier Service"}`}
+          content={`${data ? data.title : "Courier Service"}`}
+        />
+      </Helmet>
       <div className="container-fluid p-0">
         {data && <ServiceDetailBanner image={data.banner} />}
       </div>
@@ -32,7 +42,7 @@ const ServiceDetail = () => {
           </div>
           <div className="col-12 col-lg-8">
             <div className="single-service">
-            <h2>{data && data.title}</h2>
+              <h2>{data && data.title}</h2>
               {data && (
                 <div
                   dangerouslySetInnerHTML={{
@@ -40,7 +50,6 @@ const ServiceDetail = () => {
                   }}
                 />
               )}
-             
             </div>
             <hr />
             {data && data.image1 && data.image2 && (

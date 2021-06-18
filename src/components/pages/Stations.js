@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getStations } from "../data/httpService";
 import "../modules/service/service.css";
+import { Helmet } from "react-helmet";
 
 const Stations = () => {
   const [row, setRow] = useState([]);
@@ -19,6 +20,11 @@ const Stations = () => {
 
   return (
     <div className="container card  card-body my-5 shadow">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pdhscourier | Stations</title>
+        <meta name="title" content="Pdhs courier Station list" />
+      </Helmet>
       <h2 className="text-center" style={{ fontFamily: "sans-serif" }}>
         Our Station List
       </h2>

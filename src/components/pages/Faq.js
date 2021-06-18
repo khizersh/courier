@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 import bg from "../../images/service/bgservice.jpg";
 import "../modules/faq/faq.css";
+import { Helmet } from "react-helmet";
 
 const data = {
   title: "Most Asked Questions",
@@ -95,17 +96,24 @@ const FaqComponent = () => {
     document.title = "FAQ";
   }, []);
   return (
-    <div
-      className="container-fluid height"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
-      <div className="section-heading text-center">
-        <h1>FAQ</h1>
+    <>
+        <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pdhscourier | FAQ</title>
+        <meta name="title" content="Courier Frequent ask questions" />
+      </Helmet>
+      <div
+        className="container-fluid height"
+        style={{ backgroundImage: `url(${bg})` }}
+      >
+        <div className="section-heading text-center">
+          <h1>FAQ</h1>
+        </div>
+        <div className="container card ">
+          <Faq data={data} styles={styles} config={config} />
+        </div>
       </div>
-      <div className="container card ">
-        <Faq data={data} styles={styles} config={config} />
-      </div>
-    </div>
+    </>
   );
 };
 

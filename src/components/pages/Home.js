@@ -10,13 +10,19 @@ import Testimonials from "../modules/home/Testimonials";
 import Quotation from "../modules/home/Quotation";
 import Clients from "../modules/home/Clients";
 import DealSlider from "../modules/home/DealSlider";
-import NewsCard from "../modules/news/NewsCard";
 import NewsComp from "../modules/news/NewsComp";
 import { homePageService } from "../data/serviceDetail";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pdhscourier</title>
+        <meta name="title" content="Courier" />
+      </Helmet>
+
       <HomePageSlider />
       <div className="container">
         <div className="row mbl-mar">

@@ -1,8 +1,10 @@
+
+
 {
   "name": "navbar-dropdown-v1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/pdhs_react/",
+  "homepage": "/",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",

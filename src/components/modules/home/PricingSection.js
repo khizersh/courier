@@ -5,8 +5,8 @@ import Slider from "react-slick";
 const PricingSection = () => {
   const data = [
     {
-      package: "Basic",
-      price: "Rs 280.00",
+      package: "Basic (Overnight)",
+      price: "Rs 240.00",
       subtitle:"Overnight",
       array: [
         { title: "Product weight", value: "Per Kg" },
@@ -15,8 +15,8 @@ const PricingSection = () => {
       ],
     },
     {
-      package: "Standard",
-      price: "Rs 220.00",
+      package: "Standard (Cargo)",
+      price: "Rs 170.00",
       subtitle: "Cargo",
       array: [
         { title: "Product weight", value: "Per Kg" },
@@ -25,7 +25,7 @@ const PricingSection = () => {
       ],
     },
     {
-      package: "Basic",
+      package: "Basic (Detain)",
       price: "Rs 80.00",
       subtitle: "Detain",
       array: [

@@ -27,6 +27,10 @@
     color: #12610f;
 }
 
+.address{
+    line-height: 1.5rem !important;
+}
+
 .foot-div ul li {
     text-decoration: none;
     list-style: none;

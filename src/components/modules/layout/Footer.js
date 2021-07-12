@@ -10,16 +10,20 @@ const Footer = () => {
             <div className="foot-div">
               <h4 className="footer-heading">Reach us</h4>
               <ul>
-                <li>
-                  <span>
-                    <i className="fa fa-location-arrow mr-2"></i>
-                  </span>{" "}
-                  #123, Manhatt 7 Avenu, NYC
+                <li className="address">
+                  <i className="fa fa-location-arrow mr-2"></i>
+                  173-K Block 2 P.E.C.H.S Tariq Road Near Allah Wali Chowrangi
+                  Backside of Bahria Tower Oppo NewsOne Office.
                 </li>
                 <li>
-                  <i className="fa fa-phone mr-2"></i> +1-1234-567-987
+                  <i className="fa fa-phone mr-2"></i> +9221 34322571-72
                 </li>
-
+                <li>
+                  <i className="fa fa-phone mr-2"></i> +92 308 2256517
+                </li>
+                <li>
+                  <i className="fa fa-phone mr-2"></i> +92 312 8486210
+                </li>
                 <li>
                   <a href="mailto:info@pdhscourier.com" className="hov-green ">
                     <i className="fa fa-envelope"></i>{" "}
